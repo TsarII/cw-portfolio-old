@@ -2,11 +2,20 @@
 
 :root {
   color-scheme: light;
-  --paper: #f6f4f0;
-  --ink: #242321;
-  --muted: #77736d;
-  --line: #dedbd4;
-  --accent: #8b7768;
+  /* Палитра Darkness — Light Crushed Almond */
+  --darkness: #17190F;
+  --rangitoto: #303222;
+  --olive-leaf: #4C4C37;
+  --warren-tavern: #6A6751;
+  --antique: #8C856E;
+  --field-khaki: #B1A790;
+  --light-crushed-almond: #DDD8D1;
+
+  --paper: var(--light-crushed-almond);
+  --ink: var(--darkness);
+  --muted: var(--warren-tavern);
+  --line: var(--antique);
+  --accent: var(--olive-leaf);
   --page-width: 1440px;
 }
 * { box-sizing: border-box; }
@@ -69,7 +78,7 @@ h1 { margin: 0 0 22px; font-size: clamp(34px, 5vw, 62px); font-weight: 500; lett
   display: block;
   width: 100%;
   height: auto;
-  background: #ebe8e2;
+  background: var(--field-khaki);
   transition: opacity .2s ease;
 }
 .artwork:hover img { opacity: .88; }
@@ -78,6 +87,8 @@ h1 { margin: 0 0 22px; font-size: clamp(34px, 5vw, 62px); font-weight: 500; lett
 .empty-section { color: var(--muted); font-size: 12px; }
 .loading { color: var(--muted); }
 .site-footer {
+  background: var(--rangitoto);
+  color: var(--light-crushed-almond);
   width: min(100% - 64px, var(--page-width));
   margin: 0 auto;
   padding: 24px 0 36px;
