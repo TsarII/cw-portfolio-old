@@ -1,0 +1,193 @@
+media:
+  input: images
+  output: images
+  extensions: [png, jpg, jpeg, webp, gif, apng, svg]
+
+content:
+  - name: site
+    label: Настройки сайта
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - name: logo
+        label: Логотип
+        type: image
+      - name: vk
+        label: Ссылка VK
+        type: string
+      - name: telegram
+        label: Ссылка Telegram
+        type: string
+      - name: catwar
+        label: Ссылка CatWar
+        type: string
+      - name: individual_orders
+        label: Индивидуальные заказы
+        type: string
+      - name: site_orders
+        label: Сайтовые и фракционные заказы
+        type: string
+      - name: price
+        label: Ссылка на прайс
+        type: string
+      - name: telegram_channel
+        label: Ссылка на ТГК
+        type: string
+
+  - name: costumes
+    label: Костюмы
+    type: group
+    items:
+      - name: costumes_additional
+        label: Дополняющие
+        type: file
+        path: data/costumes-additional.json
+        format: json
+        list: true
+        fields:
+          - name: title
+            label: Название
+            type: string
+          - name: image
+            label: Изображение
+            type: image
+            required: true
+          - name: description
+            label: Подпись
+            type: text
+          - name: order
+            label: Порядок
+            type: number
+      - name: costumes_overlapping
+        label: Перекрывающие
+        type: file
+        path: data/costumes-overlapping.json
+        format: json
+        list: true
+        fields:
+          - name: title
+            label: Название
+            type: string
+          - name: image
+            label: Изображение
+            type: image
+            required: true
+          - name: description
+            label: Подпись
+            type: text
+          - name: order
+            label: Порядок
+            type: number
+
+  - name: items
+    label: Предметы
+    type: file
+    path: data/items.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Название
+        type: string
+      - name: image
+        label: Изображение
+        type: image
+        required: true
+      - name: description
+        label: Подпись
+        type: text
+      - name: order
+        label: Порядок
+        type: number
+
+  - name: medals
+    label: Медали
+    type: file
+    path: data/medals.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Название
+        type: string
+      - name: image
+        label: Изображение
+        type: image
+        required: true
+      - name: description
+        label: Подпись
+        type: text
+      - name: order
+        label: Порядок
+        type: number
+
+  - name: illustrations
+    label: Иллюстрации
+    type: file
+    path: data/illustrations.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Название
+        type: string
+      - name: image
+        label: Изображение
+        type: image
+        required: true
+      - name: description
+        label: Подпись
+        type: text
+      - name: order
+        label: Порядок
+        type: number
+
+  - name: backgrounds
+    label: Фоны
+    type: group
+    items:
+      - name: backgrounds_full
+        label: Полноценный
+        type: file
+        path: data/backgrounds-full.json
+        format: json
+        list: true
+        fields:
+          - name: title
+            label: Название
+            type: string
+          - name: image
+            label: Изображение
+            type: image
+            required: true
+          - name: description
+            label: Подпись
+            type: text
+          - name: order
+            label: Порядок
+            type: number
+      - name: backgrounds_decoration
+        label: Украшение
+        type: file
+        path: data/backgrounds-decoration.json
+        format: json
+        list: true
+        fields:
+          - name: title
+            label: Название
+            type: string
+          - name: image
+            label: Изображение
+            type: image
+            required: true
+          - name: description
+            label: Подпись
+            type: text
+          - name: order
+            label: Порядок
+            type: number
+
+settings:
+  content:
+    merge: true

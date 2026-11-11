@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4f0">
+  <meta name="description" content="Портфолио художника">
+  <title>Портфолио художника</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="На главную"><img id="logo" alt="Логотип" hidden></a>
+    <nav class="social-links" aria-label="Социальные сети">
+      <a id="vk-link" hidden>VK</a>
+      <a id="telegram-link" hidden>TG</a>
+      <a id="catwar-link" hidden>CW</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="intro">
+      <p class="eyebrow">ART PORTFOLIO</p>
+      <h1>Портфолио художника</h1>
+      <p class="order-status" id="order-status"></p>
+      <div class="intro-meta">
+        <p>Дата обновления: <time id="updated-date">загружается…</time></p>
+        <div class="text-links">
+          <a id="price-link" hidden>Прайс</a>
+          <a id="channel-link" hidden>ТГК</a>
+        </div>
+      </div>
+    </section>
+
+    <div id="gallery" class="gallery-sections" aria-live="polite">
+      <p class="loading">Загружаю портфолио…</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>Портфолио художника</span>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Просмотр работы">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Закрыть">×</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Предыдущая работа">‹</button>
+    <figure>
+      <img id="lightbox-image" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Следующая работа">›</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
